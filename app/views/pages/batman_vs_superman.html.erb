@@ -1,0 +1,11 @@
+<div id="batman" style="float: left; width: 50%; height: 100vh">
+	<%= link_to "Página de Batman", pages_batman_path %>
+</div>
+<div id="superman" style="float: right; width: 50%; height: 100vh">
+	<%= link_to "Página de Superman", pages_superman_path %>
+</div>
+
+<script>
+	$("#batman").backstretch("<%= asset_path 'batman-background.jpg' %>");
+	$("#superman").backstretch("<%= asset_path 'superman-background.png' %>");
+</script>
