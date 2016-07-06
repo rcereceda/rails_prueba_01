@@ -6,8 +6,12 @@ class PagesController < ApplicationController
   end
 
   def batman_vs_superman
-  	@total_batman = (Vote.group(:heroe).count).to_a[0][1]
-  	@total_superman = (Vote.group(:heroe).count).to_a[1][1]
+  	if (Vote.group(:heroe).count).to_a[0]
+  		@total_batman = (Vote.group(:heroe).count).to_a[0][1]
+  	end
+  	if (Vote.group(:heroe).count).to_a[1]
+  		@total_superman = (Vote.group(:heroe).count).to_a[1][1]
+  	end
   end
 
   def vote
