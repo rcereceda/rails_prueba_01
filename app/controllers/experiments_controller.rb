@@ -2,6 +2,7 @@ class ExperimentsController < ApplicationController
 	layout "bootstrap"
 
   def page1
+  	@seg = 300
   end
 
   def page2
