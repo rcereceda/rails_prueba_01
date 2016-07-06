@@ -1,5 +1,5 @@
 <div id="batman" style="float: left; width: 50%; height: 100vh">
-	<%= link_to "Página de Batman", pages_batman_path %>
+	<%= link_to "Página de Batman", pages_batman_path, style:"color:white;font-size:32px" %>
 
 	<%= form_tag pages_vote_path, method: :post do %>
 		<%= hidden_field_tag(:heroe, "Batman") %>
@@ -8,9 +8,10 @@
 		<br>
 		<%= submit_tag "Votar" %>
 	<% end %>
+	<h2 style="color: white">Votos: <%= @total_batman %></h2>
 </div>
 <div id="superman" style="float: right; width: 50%; height: 100vh">
-	<%= link_to "Página de Superman", pages_superman_path %>
+	<%= link_to "Página de Superman", pages_superman_path, style:"color:white;font-size:32px" %>
 
 	<%= form_tag pages_vote_path, method: :post do %>
 		<%= hidden_field_tag(:heroe, "Superman") %>
@@ -19,6 +20,7 @@
 		<br>
 		<%= submit_tag "Votar" %>
 	<% end %>
+	<h2 style="color: white">Votos: <%= @total_superman %></h2>
 </div>
 
 <script>
